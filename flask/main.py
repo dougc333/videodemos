@@ -3,7 +3,7 @@ from flask import Flask, render_template, Response
 from camera import VideoCamera
 import time
 
-app = Flask(__name__)
+app = Flask(__name__, root_path='/Users/dc/videodemos/flask')
 
 
 @app.route('/')
