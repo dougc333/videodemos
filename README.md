@@ -9,3 +9,8 @@ use the command line
 play the mp4 in vlc. quicktime wont work
 
 
+/Applications/VLC.app/Contents/MacOS/VLC d4-101-at-spencer.asf --sout='#transcode{vcodec=h264}:std{access=file,dst=/Users/dc/Downloads/output1.mp4}'
+stores file output1.mp4. There is no display of the video. 
+Use /Applications/VLC.app/Contents/MacOS/VLC /Users/dc/Downloads/output1.mp4
+
+
