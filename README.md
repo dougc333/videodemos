@@ -15,3 +15,5 @@ stores file output1.mp4. There is no display of the video.
 Use /Applications/VLC.app/Contents/MacOS/VLC /Users/dc/Downloads/output1.mp4
 
 
+testvideo.html extracts frames from video only works on firefox; mp4 codec not in chrome
+
