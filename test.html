@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+    #upperLeft {
+    position:absolute;
+    height: 240px;
+    width: 320px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: powderblue;
+    border:1px solid black;
+    }
+
+    #center {
+    position:absolute;
+    top: 50%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin: -180px 0 0 -240px;
+    background-color: yellow;
+    border:1px solid black;
+    }
+
+    </style>
+
+</head>
+<body>
+
+<canvas id="upperLeft"></canvas>
+<video id="center" width="320" height="240" controls loop>
+  <source src="output1.mp4" type="video/mp4">
+</video>
+
+</body>
+</html>

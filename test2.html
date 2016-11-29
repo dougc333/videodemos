@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body {
+    background: white;
+    }
+
+    #upperLeft {
+    position: absolute;
+    top 0px;
+    bottom 0px;
+    left 0px;
+    right 0px;
+    width: 200px;
+    height: 320px;
+    background-color: powder-blue;
+    border: 1px solid black;
+    }
+
+    #center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -180px 0 0 -240px;
+    border: 1px solid black;
+    }
+    </style>
+<script>
+  window.onload=function(){
+    document.getElementById("upperLeft").innerHTML += "js";
+
+    var canvas = document.getElementById("center");
+
+    function getMousePos(canvas,event){
+        var rect = canvas.getBoundingClientRect();
+        return {x:event.clientX - rect.left, y:event.clientY - rect.top};
+    }
+    function writeToCanvas(canvas,msg){
+        alert("writeToCanvas");
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.font='10pt Calibri';
+        context.fillStyle('black');
+        context.fillText(msg,10,25);
+    }
+    canvas.addEventListener("mousedown",function(event){
+        alert("event listener mousedown");
+        var mousePos = getMousePos(canvas,event);
+        alert("mousePos.x:"+mousePos.x+" y:"+mousePos.y);
+        var mouseMessage = "x:"+mousePos.x+" y:"+mousePos.y;
+        writeToCanvas(canvas,mouseMessage);
+    },false);
+
+    function fooCanvas(event){
+        canvas = document.getElementById("center");
+        alert("fooCanvas");
+    }
+    //canvas.addEventListener("mousedown",function(event){
+    //    alert("here");
+    //},true);
+    }
+    //separate functions canvas has to load after window.onload
+    function foo(event){
+        document.getElementById("upperLeft").innerHTML +=" mouse click";
+        clientX = event.clientX;
+        clientY = event.clientY;
+        document.getElementById("upperLeft").innerHTML += " clientX:"+clientX;
+        document.getElementById("upperLeft").innerHTML += " clientY:"+clientY;
+    }
+    </script>
+</head>
+<body>
+<div id="upperLeft" onclick="foo(event)">upperleft div mouse test</div>
+<canvas id="center" >canvas here</canvas>
+
+</body>
+</html>
