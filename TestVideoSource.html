@@ -5,46 +5,48 @@
     <title>TestVideoSource</title>
     <style>
     body {
-    background: black;
+    background: white;
     }
 
-    #c {
+    #top {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 100%;
+    width:  320px;
+    height: 240px;
+    background-color:yellow;
+    border:1px solid black;
     }
 
-    #v {
+    #bottom {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -180px 0 0 -240px;
+    top: 300px;
+    background-color:yellow;
+    border:1px solid black;
+    background-color:green;
     }
     </style>
-
-    <script type="text/javascript">
+    <script >
     document.addEventListener('DOMContentLoaded', function(){
-    var v = document.getElementById('v');
-    var canvas = document.getElementById('c');
-    var context = canvas.getContext('2d');
+        var v = document.getElementById('bottom');
+        var canvas = document.getElementById('top');
+        var context = canvas.getContext('2d');
 
-    var cw = Math.floor(canvas.clientWidth / 100);
-    var ch = Math.floor(canvas.clientHeight / 100);
-    console.log("canvas.width:"+canvas.width);
-    console.log("canvas.height:"+canvas.height);
+        var cw = Math.floor(canvas.clientWidth);
+        var ch = Math.floor(canvas.clientHeight);
+        console.log("canvas.width:"+canvas.width);
+        console.log("canvas.height:"+canvas.height);
 
-    canvas.width = cw;
-    canvas.height = ch;
+        canvas.width = cw;
+        canvas.height = ch;
 
-    v.addEventListener('play', function(){
-        draw(this,context,cw,ch);
+        v.addEventListener('play', function(){
+            draw(this,context,cw,ch);
+        },false);
+
     },false);
-
-},false);
 
 function draw(v,c,w,h) {
     if(v.paused || v.ended) return false;
@@ -52,11 +54,13 @@ function draw(v,c,w,h) {
     setTimeout(draw,20,v,c,w,h);
 }
 </script>
+
 </head>
 <body>
-<canvas id=c></canvas>
-<video id=v width="320" height="240" controls loop>
+<canvas id="top"></canvas>
+<video id="bottom" width="320" height="240" controls loop>
   <source src="output1.mp4" type="video/mp4">
 </video>
+
 </body>
 </html>

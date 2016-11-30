@@ -17,3 +17,5 @@ Use /Applications/VLC.app/Contents/MacOS/VLC /Users/dc/Downloads/output1.mp4
 
 testvideo.html extracts frames from video only works on firefox; mp4 codec not in chrome
 
+TestVideoSource.html canvas/video HTML5 elements. Playback video from html5 source, add opencv in JS to frames
+
