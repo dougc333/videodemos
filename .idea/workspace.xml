@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54d7d79a-bf00-4095-8847-660cd1fed23a" name="Default" comment="" />
+    <list default="true" id="54d7d79a-bf00-4095-8847-660cd1fed23a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VideoSourceCountDraws.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestVideoSource.html" afterPath="$PROJECT_DIR$/TestVideoSource.html" />
+    </list>
     <ignored path="videodemos.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,18 +55,8 @@
       <file leaf-file-name="vlc.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/venv/lib/python2.7/site-packages/vlc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testvideo.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/testvideo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            <state relative-caret-position="-300">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -72,8 +65,28 @@
       <file leaf-file-name="TestVideoSource.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestVideoSource.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+            <state relative-caret-position="264">
+              <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoSourceCountDraws.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VideoSourceCountDraws.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testmousedown.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testmousedown.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,13 +115,14 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/test2.html" />
         <option value="$PROJECT_DIR$/TestChrome.html" />
-        <option value="$PROJECT_DIR$/TestVideoSource.html" />
         <option value="$PROJECT_DIR$/testmouse.html" />
+        <option value="$PROJECT_DIR$/TestVideoSource.html" />
+        <option value="$PROJECT_DIR$/VideoSourceCountDraws.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="59" />
+    <option name="y" value="54" />
     <option name="width" value="1400" />
     <option name="height" value="870" />
   </component>
@@ -326,7 +340,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="59" width="1400" height="870" extended-state="0" />
+    <frame x="0" y="54" width="1400" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25714287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -606,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testvideo.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flask/camera.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -655,14 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/venv/lib/python2.7/site-packages/vlc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -687,14 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestVideoSource.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testmouse.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
@@ -705,8 +696,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testvideo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        <state relative-caret-position="89">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/lib/python2.7/site-packages/vlc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testvideo.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testmousedown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestVideoSource.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoSourceCountDraws.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
           <folding />
         </state>
       </provider>
