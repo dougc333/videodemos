@@ -32,13 +32,21 @@
   }
 </style>
 <script>
-  var num;
+  var num=0;
   var status;
 
   function draw(video, context, height, width ){
     if (video.paused || video.ended) return false;
-    context.drawImage(video, 0,0, width,height);
-    setTimeout(draw,20,video,context,height,width);
+    context.drawImage(video, 0,0, height,width);
+    //width, height
+    var im = context.getImageData(0,0,width,height);
+    var writeMe = document.getElementById("print");
+    writeMe.innerHTML += "len:"+im.data.length+" "
+    for (var i=0;i<1000;i++){
+        writeMe.innerHTML += im.data[i];
+    }
+    writeMe.innerHTML += "end ";
+    setTimeout(draw,500,video,context,height,width);
   }
 
 
@@ -53,12 +61,25 @@
     },false);
   },false);
 
+  //this oonly tracks the window, not the canvas element
+  var foo = function(){
+    num++;
+    var t = document.getElementById("top");
+    t.innerHTML = num;
+  }
+  document.getEventListener('DOMContentLoaded', function(){}, ){
+
+  }
+  window.requestAnimationFrame(foo);
+
 </script>
 <body>
+<div id="top"></div>
     <p>original video</p>
     <video id="video" height="320" width="240" controls loop>
         <source src="output1.mp4" type="video/mp4">
     </video>
-   <canvas id="c"></canvas>
+   <canvas id="c" onclick="function(event){alert("asdf");}"></canvas>
+<div id="print"></div>
 </body>
 </html>

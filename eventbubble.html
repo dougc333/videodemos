@@ -4,20 +4,60 @@
     <meta charset="UTF-8">
     <title>event bubble example</title>
     <style>
-        #eb{
-        height:100px;
+        #bottom{
+        height:200px;
         width:200px;
         background-color:pink;
         }
+        #top{
+        height:100px;
+        width:100px;
+        background-color:yellow;
+        }
+
+        #step2top{
+        position: fixed;
+        bottom: 0px;
+        height: 100px;
+        width: 100px;
+        background-color: azure;
+        }
+
+        #step2bottom{
+        position: fixed;
+        bottom:0px;
+        height:200px;
+        width:200px;
+        background-color:beige;
+        }
     </style>
     <script>
-        window.onload(){
+        document.addEventListener("DOMContentLoaded",function(event){
+            var top = document.getElementById("top");
+            var bottom = document.getElementById("bottom");
 
+            top.addEventListener('click',foo,false);
+            bottom.addEventListener('click',foo1,false);
+            //window.addEventListener('click', foo1, false);
 
+        },false);
+
+        function foo(event){
+           alert("foo");
         }
+        function foo1(event){
+            alert("foo1");
+        }
+
     </script>
 </head>
 <body>
-<div id="eb"></div>
+<div id="bottom">
+    <div id="top"></div>
+</div>
+<div id="mouseloc"></div>
+<div id = "step2bottom"></div>
+<div id="step2top"></div>
+
 </body>
 </html>
