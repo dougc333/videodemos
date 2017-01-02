@@ -50,16 +50,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opencv_mouse.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opencv_mouse.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="31" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="video_mouse.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/video_mouse.py">
           <provider selected="true" editor-type-id="text-editor">
