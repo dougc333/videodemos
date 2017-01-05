@@ -1,5 +1,8 @@
 
-from func import grayscale
-from func import canny
-from func import hough
-from func import gaussian_blur
+from imagefunc import BGRgrayscale
+from imagefunc import RGBgrayscale
+from imagefunc import canny
+from imagefunc import hough
+from imagefunc import gaussian_blur
+
+from videofunc import store_as_numpy
