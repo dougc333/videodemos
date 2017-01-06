@@ -1,5 +1,9 @@
 VideoDemos for NVidia
 
+delete video_mouse.ipynb later 
+all the javascript and python mouse handler for video is under video_mouse
+
+delete 
 
 angular.min.js so we dont have to put this in all the subdirectories
 testprograms.ipynb has vlc demo program playing video. need a ui
