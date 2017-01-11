@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    #c {
+        position: absolute,
+        background-color: light-blue,
+        height: 240px,
+        width: 320px
+    }
+    #video{
+        position:absolute,
+        background-color: yellow,
+        height: 240px,
+        width: 320px,
+        top: 300px,
+        border: 1 px solid black
+    }
+
+</style>
 <script>
     var canvasHeight=240;
     var canvasWidth = 320;
 
-    document.addEventListener('',function(){}, false);
+    document.addEventListener('video',function(event){
+        console.log ('event X',event.X)
+
+    }, false);
 
 
 
 </script>>
 <body>
-<form >
-    height: <input type="text" id="height"><br>
-    width: <input type=text" id="width"><br>
-    <input type="submit" value="Submit">
-</form>
 <video id="video" height="320" width="240" controls loop>
     <source src="output1.mp4" type="video/mp4">
 </video>
