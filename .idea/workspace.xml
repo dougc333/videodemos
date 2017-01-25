@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54d7d79a-bf00-4095-8847-660cd1fed23a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Untitled.pages" afterPath="$PROJECT_DIR$/Untitled.pages" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video_mouse/videojs.pages" afterPath="$PROJECT_DIR$/video_mouse/videojs.pages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="videodemos.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -161,7 +159,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="243" />
+    <option name="x" value="77" />
     <option name="y" value="23" />
     <option name="width" value="1006" />
     <option name="height" value="870" />
@@ -372,7 +370,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="243" y="23" width="1006" height="870" extended-state="0" />
+    <frame x="77" y="23" width="1006" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34890655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
