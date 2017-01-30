@@ -7,32 +7,34 @@
         padding: 0px;
       }
     </style>
-  </head>
-  <body>
-    <canvas id="myCanvas" width="578" height="200"></canvas>
     <script>
-      function writeMessage(canvas, message) {
-        var context = canvas.getContext('2d');
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.font = '18pt Calibri';
-        context.fillStyle = 'black';
-        context.fillText(message, 10, 25);
-      }
-      function getMousePos(canvas, evt) {
-        var rect = canvas.getBoundingClientRect();
-        return {
-          x: evt.clientX - rect.left,
-          y: evt.clientY - rect.top
-        };
-      }
-      var canvas = document.getElementById('myCanvas');
+    window.onload = function(){
+      var canvas = document.getElementById("c");
       var context = canvas.getContext('2d');
 
-      canvas.addEventListener('mousemove', function(evt) {
-        var mousePos = getMousePos(canvas, evt);
-        var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
-        writeMessage(canvas, message);
+      writeTest(context);
+      mousePos(canvas,context);
+    }
+
+    function writeTest(context){
+      context.font = '18pt Georgia';
+      context.fillText("do you see me????",50,50);
+
+    }
+
+    function mousePos(canvas,context){
+      canvas.addEventListener("click", function(e){
+        console.log(e.clientX +":"+ e.clientY);
+        context.clearRect(0,0,canvas.width,canvas.height)
+        context.fillText(e.clientX +":"+ e.clientY,100,100)
       }, false);
+
+    }
+
     </script>
+  </head>
+  <body>
+    <canvas id="c" width="500" height="400"></canvas>
+
   </body>
 </html>

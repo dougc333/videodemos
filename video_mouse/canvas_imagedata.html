@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var canvas = document.getElementById("c");
+            var context = canvas.getContext("2d");
+            context.rect(0,0,canvas.width, canvas.height);
+            context.fill();
+            var img = context.getImageData(0,0,100,100);
+            console.log(img.data);
+            for (var i=0;i<img.data.length;i=i+4){
+               if (i%40 === 0){
+                  //set G bit only
+                  img.data[i+1]=255;
+               }
+            }
+            console.log(img.data);
+            context.putImageData(img,0,0);
+        }
+    </script>
+</head>
+<body>
+<canvas id="c" height="320" width="540"></canvas>
+</body>
+</html>
