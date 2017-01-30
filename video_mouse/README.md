@@ -7,6 +7,9 @@ Cover:
 1) TestChrome.html plays video works in Firefox not in Chrome. To test open in pycharm right click open in browser select Firefox or Chrome
 2) TestImageDraw.html broken. 
 3) TestImageDraw2.html doesnt do shit
-4) testmousedown.html: display mouse coordinates in div, test event bubbling/capture
-5) testmousepos.html: display mouse coordinates in div. What is diff w/above? delete? 
-6) 
+4) testmousedown.html: display mouse coordinates in left div, test event bubbling/capture
+5) testmousepos.html: display mouse coordinates in div. What is diff w/above? Less code. 
+6) TestVideoSource. bottom is color image top is grayscale image. 
+7) canvas_imagedata.html test reading and writing canvas frame buffer
+8) 2canvas.html draw rectangle onto canvas. 
+
