@@ -12,4 +12,6 @@ Cover:
 6) TestVideoSource. bottom is color image top is grayscale image. 
 7) canvas_imagedata.html test reading and writing canvas frame buffer
 8) 2canvas.html draw rectangle onto canvas. 
+9) test_requestanimationframe.html. Shouldnt use setTimeout like in TestVideoSource should use requestAnimationFrame
+which is controlled by browser v.s. guessing when next frame is ready by timeout. 
 

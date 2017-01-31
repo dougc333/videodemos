@@ -64,13 +64,13 @@
         document.addEventListener('DOMContentLoaded', function(){
             console.log("domcontentloaded");
             var vidBottom = document.getElementById('bottom');
-            var canvas = document.getElementById('top');
-            var context = canvas.getContext('2d');
-
-            var cw = canvas.clientWidth;
-            var ch = canvas.clientHeight;
 
             vidBottom.addEventListener('play', function(){
+               var canvas = document.getElementById('top');
+               var context = canvas.getContext('2d');
+               var cw = canvas.clientWidth;
+               var ch = canvas.clientHeight;
+
                 console.log("this:", this);
                 draw(this,context,cw,ch);
             },false);
