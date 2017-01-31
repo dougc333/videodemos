@@ -10,8 +10,9 @@ Cover:
 4) testmousedown.html: display mouse coordinates in left div, test event bubbling/capture
 5) testmousepos.html: display mouse coordinates in div. What is diff w/above? Less code. 
 6) TestVideoSource. bottom is color image top is grayscale image. 
-7) canvas_imagedata.html test reading and writing canvas frame buffer
-8) 2canvas.html draw rectangle onto canvas. 
+7) canvas_greenline.html write green line to canvas w/fill for image. Simplest case for debugging
+   canvas_greenlinevideo.html green line to video image. For debugging reference
+8) 2canvas.html draw rectangle onto canvas. Simplest case for debugging. 
 9) test_requestanimationframe.html. Shouldnt use setTimeout like in TestVideoSource should use requestAnimationFrame
 which is controlled by browser v.s. guessing when next frame is ready by timeout. 
 

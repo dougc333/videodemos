@@ -27,6 +27,36 @@
                 draw();
             });
 
+            canvas.addEventListener('click', function(e){
+                console.log(e.clientX + ":" + e.clientY);
+                var ctx = canvas.getContext('2d');
+                var img = ctx.getImageData(0,0,canvas.width, canvas.height);
+                console.log("img before change:"+img.data);
+                //console.log("img length:"+img.data.length);
+                //turn the pixels green for the first point
+                var index = e.clientX * e.clientY;
+                //img.data[e.clientX * e.clientY] = 255; //sets R
+                //img.data[ (e.clientX+1) * e.clientY] = 255;
+                //img.data[ (e.clientX-1) * e.clientY] = 255;
+                //img.data[ (e.clientX) * (e.clientY+1)] = 255;
+                //img.data[ (e.clientX+1) * (e.clientY+1)] = 255;
+                //img.data[ (e.clientX-1) * (e.clientY+1)] = 255;
+                //img.data[ (e.clientX+1) * (e.clientY-1)] = 255;
+                //img.data[ (e.clientX+1) * (e.clientY-1)] = 255;
+                //img.data[ (e.clientX+1) * (e.clientY-1)] = 255;
+                for (var i=0;i<img.data.length;i=i+4){
+                    img.data[i+1]=255; //should see green lines
+                }
+                console.log("change img.data", img.data);
+                //redraw this onto the screen
+                ctx.putImageData(img,0,0);
+
+                ctx.arc(e.clientX, e.clientY,10,0,2*math.PI,false);
+                ctx.fillStyle='green';
+                ctx.fill();
+                ctx.lineWidth=3;
+                ctx.stroke();
+            });
         });
 
 
