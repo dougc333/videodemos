@@ -45,7 +45,9 @@
                 //img.data[ (e.clientX+1) * (e.clientY-1)] = 255;
                 //img.data[ (e.clientX+1) * (e.clientY-1)] = 255;
                 for (var i=0;i<img.data.length;i=i+4){
-                    img.data[i+1]=255; //should see green lines
+                    if(i%40==0){
+                      img.data[i+1]=255; //should see green lines
+                    }
                 }
                 console.log("change img.data", img.data);
                 //redraw this onto the screen

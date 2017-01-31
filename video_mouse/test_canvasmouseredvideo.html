@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded",function(){
+            var v = document.querySelector("#v");
+            var canvas = document.querySelector("#c");
+            var ctx = canvas.getContext("2d");
+
+            v.addEventListener('loadedmetadata', function(){
+                canvas.width = this.videoWidth;
+                canvas.height = this.videoHeight;
+            });
+
+            var draw = function(){
+                canvas.getContext('2d').drawImage(v,0,0);
+                //requestAnimationFrame(draw);
+            }
+
+            v.addEventListener('play',function(){
+                if (v.paused || v.ended) return;
+                draw();
+            });
+
+            canvas.addEventListener('click', function(e){
+                var canvas = document.querySelector("#c");
+                var ctx = canvas.getContext('2d');
+                var img = ctx.getImageData(0,0,canvas.width, canvas.height);
+                console.log("mouse client:"+e.clientX + ":" + e.clientY);
+                var rect = canvas.getBoundingClientRect();
+                var mouse_canvas_x = Math.round((e.clientX-rect.left)/(rect.right-rect.left)*canvas.width)
+                var mouse_canvas_y = Math.round((e.clientY-rect.top)/(rect.bottom-rect.top)*canvas.height)
+                console.log("mouse x,y:"+mouse_canvas_x+","+mouse_canvas_y)
+                console.log("canvas width:"+canvas.width+" canvas.height:"+canvas.height);
+                //var small = img.data.slice(e.clientX*e.clientY,(e.clientX-1)*(e.clientY-1)+40));
+                //console.log("img before change:"+small);
+                //console.log("img length:"+img.data.length);
+                //turn the pixels green for the first point
+                //X=300;
+                //Y=500;
+                //X = (e.clientX*4-rect.left);
+                Y = (e.clientY-rect.top);
+                X=1;
+                Y=(640*4)*Y;
+                for(var i=0;i<100;i=i+4){
+                 img.data[(X * Y)+i] = 255; //sets R
+                 img.data[(X * Y)+1+i] = 0; //sets R
+                 img.data[(X * Y)+2+i] = 0; //sets R
+                 img.data[(X * Y)+3+i] = 255;
+                }
+                //img.data[ (X+1) * Y] = 255;
+                //img.data[ (X-1) * Y] = 255;
+                //img.data[ (X) * (Y+1)] = 255;
+                //img.data[ (X+1) * (Y+1)] = 255;
+                //img.data[ (X-1) * (Y+1)] = 255;
+                //img.data[ (X+1) * (Y-1)] = 255;
+                //img.data[ (X+1) * (Y-1)] = 255;
+                //img.data[ (X+1) * (Y-1)] = 255;
+                console.log("change img.data", img.data);
+                //redraw this onto the screen
+                ctx.putImageData(img,0,0);
+                var verifyImg = ctx.getImageData(0,0,canvas.width,canvas.height);
+                console.log("verifyImg: "+verifyImg.data.slice((X)*(Y),X*Y+20));
+                //ctx.arc(e.clientX, e.clientY,10,0,2*math.PI,false);
+                //ctx.fillStyle='green';
+                //ctx.fill();
+                //ctx.lineWidth=3;
+                //ctx.stroke();
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+<canvas id="c" height="320" width="240"></canvas>
+<video id="v" width="320" height="240" controls loop>
+  <source src="output1.mp4" type="video/mp4">
+</video>
+
+</body>
+</html>

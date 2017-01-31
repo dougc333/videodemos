@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
     <script>
 
+        document.addEventListener("DOMContentLoaded",function(){
+            var v = document.querySelector("#v");
+            var canvas = document.querySelector("#c");
+            var ctx = canvas.getContext("2d");
 
+            v.addEventListener('loadedmetadata', function(){
+                canvas.width = this.videoWidth;
+                canvas.height = this.videoHeight;
+            });
+
+            var draw = function(){
+                canvas.getContext('2d').drawImage(v,0,0);
+                //requestAnimationFrame(draw);
+            }
+
+            v.addEventListener('play',function(){
+                if (v.paused || v.ended) return;
+                draw();
+            });
+
+            canvas.addEventListener('click', function(e){
+                console.log(e.clientX + ":" + e.clientY);
+                var ctx = canvas.getContext('2d');
+                var img = ctx.getImageData(0,0,canvas.width, canvas.height);
+                console.log("img before change:"+img.data);
+                //console.log("img length:"+img.data.length);
+                //turn the pixels green for the first point
+                var index = e.clientX * e.clientY;
+                for (var i=0;i<img.data.length;i=i+4){
+                    if(i%40==0){
+                      img.data[i+1]=255; //should see green lines
+                    }
+                }
+                console.log("change img.data", img.data);
+                //redraw this onto the screen
+                ctx.putImageData(img,0,0);
+
+                ctx.arc(e.clientX, e.clientY,10,0,2*math.PI,false);
+                ctx.fillStyle='green';
+                ctx.fill();
+                ctx.lineWidth=3;
+                ctx.stroke();
+            });
+        });
 
 
     </script>
