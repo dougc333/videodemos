@@ -18,7 +18,10 @@ Cover:
    2) try to get the x or y coordinate right first. click and you should see a horizontal Y coordinate matching the Y coordinate of the mouse
       this simple exercise shows that e.clientX*e.clientY is wrong. And e.clientX*4 and e.clientY*4 is wrong
       you get: X=some constant and Y=(canvas.width*4)*y where y = e.clientY-rect.top
-      Once Y fixed, modify X. 
+      Once Y fixed, modify X.
+      This is in file test_canvasredvideo_y.html
+   3) test_canvasredvideo.html shows 100px red line display to canvas w/ X * & Y coordinate calculation
+ 
 8) 2canvas.html draw rectangle onto canvas. Simplest case for debugging. 
 9) test_requestanimationframe.html. Shouldnt use setTimeout like in TestVideoSource should use requestAnimationFrame
 which is controlled by browser v.s. guessing when next frame is ready by timeout. 

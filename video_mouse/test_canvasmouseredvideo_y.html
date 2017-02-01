@@ -44,15 +44,14 @@
                 //X=300;
                 //Y=500;
                 //X = (e.clientX*4-rect.left);
-                console.log("rect.left "+rect.left)
-                X = e.clientX * 4 - rect.left*4;
                 Y = (e.clientY-rect.top);
+                X=1;
                 Y=(640*4)*Y;
                 for(var i=0;i<100;i=i+4){
-                 img.data[(X + Y)+i] = 255; //sets R
-                 img.data[(X + Y)+1+i] = 0; //sets R
-                 img.data[(X + Y)+2+i] = 0; //sets R
-                 img.data[(X + Y)+3+i] = 255;
+                 img.data[(X * Y)+i] = 255; //sets R
+                 img.data[(X * Y)+1+i] = 0; //sets R
+                 img.data[(X * Y)+2+i] = 0; //sets R
+                 img.data[(X * Y)+3+i] = 255;
                 }
                 //img.data[ (X+1) * Y] = 255;
                 //img.data[ (X-1) * Y] = 255;
