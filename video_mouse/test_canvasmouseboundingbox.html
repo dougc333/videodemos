@@ -11,6 +11,8 @@
             var v = document.querySelector("#v");
             var canvas = document.querySelector("#c");
             var ctx = canvas.getContext("2d");
+            var firstMousePt=[];
+            var secondMousePt=[];
 
             v.addEventListener('loadedmetadata', function(){
                 canvas.width = this.videoWidth;
@@ -38,15 +40,34 @@
                 console.log("mouse x,y:"+mouse_canvas_x+","+mouse_canvas_y)
                 console.log("canvas width:"+canvas.width+" canvas.height:"+canvas.height);
                 console.log("rect.left "+rect.left)
-                X = e.clientX * 4 - rect.left * 4;
-                Y = (e.clientY-rect.top);
-                Y= (canvas.width * 4) * Y;
-                for(var i=0;i<100;i=i+4){
-                 img.data[(X + Y)+i] = 255; //sets R
-                 img.data[(X + Y)+1+i] = 0; //sets R
-                 img.data[(X + Y)+2+i] = 0; //sets R
-                 img.data[(X + Y)+3+i] = 255; //make sure transparency bit 255 for fully visible
+                if (firstMousePt.length===0){
+                    firstMousePt[0] = e.clientX;
+                    firstMousePt[1] = e.clientY;
+                    //draw line
+                    X = e.clientX * 4 - rect.left * 4;
+                    Y = (e.clientY-rect.top);
+                    Y= (canvas.width * 4) * Y;
+                    for(var i=0;i<100;i=i+4){
+                        img.data[(X + Y)+i] = 255; //sets R
+                        img.data[(X + Y)+1+i] = 0; //sets R
+                        img.data[(X + Y)+2+i] = 0; //sets R
+                        img.data[(X + Y)+3+i] = 255; //make sure transparency bit 255 for fully visible
+                    }
+                }else if (firstMousePt.length===2 && secondMousePt.length==0){
+                    secondMousePt[0] = e.clientX;
+                    secondMoustPt[1] = e.clientY;
+                    console.log("adding second mouse pt");
+                    //draw rectangle
+                    var x_len = secondMousePt[0] - firstMousePt[0];
+                    var y_len = secondMousePt[1] - firstMousePt[1];
+                    console.log("xlen:"+xlen+" ylen:"+ylen);
+
+
+                    //clear mouse points
+                    firstMousePt = [];
+                    secondMousePt = [];
                 }
+
                 console.log("change img.data", img.data);
                 //redraw this onto the screen
                 ctx.putImageData(img,0,0);
