@@ -2,7 +2,7 @@
 	function clear() {
 		ctx.clearRect(0,0,c.width, c.height); 
 	}
-
+ 
 	function drawImage(src){
 		var img = new Image(); 
 		img.src = src; 
