@@ -46,3 +46,7 @@
 		ctx.fillText(cv, (c.width - w.width)/2, 50); 
 		ctx.strokeText(cv, (c.width - w.width)/2, 50); 
 	}
+
+
+
+	
