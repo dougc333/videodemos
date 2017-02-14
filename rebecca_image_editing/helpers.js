@@ -2,7 +2,7 @@
 	function clear() {
 		ctx.clearRect(0,0,c.width, c.height); 
 	}
-
+ 
 	function drawImage(src){
 		var img = new Image(); 
 		img.src = src; 
@@ -46,3 +46,7 @@
 		ctx.fillText(cv, (c.width - w.width)/2, 50); 
 		ctx.strokeText(cv, (c.width - w.width)/2, 50); 
 	}
+
+
+
+	
